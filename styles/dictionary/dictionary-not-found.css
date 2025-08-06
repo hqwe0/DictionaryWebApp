@@ -1,0 +1,20 @@
+.not-found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.not-found > .emoji{
+ font-size: 64px;
+}
+.not-found > .alert{
+  font-size: 20px;
+  font-weight: bold;
+}
+.not-found > .message{
+  text-align: center;
+  line-height: 1.5;
+  color: var(--meaning-color);
+}

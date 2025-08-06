@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/general.css">
+  <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/search-bar.css">
+  <link rel="stylesheet" href="./styles/dictionary/dictionary-head.css">
+  <link rel="stylesheet" href="./styles/dictionary/dictionary-main.css">
+  <link rel="stylesheet" href="./styles/dictionary/dictionary-not-found.css">
+  
+  <title>Frontend Mentor | Dictionary web app</title>
+</head>
+<body>
+  <div class="page js-page">
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="library-logo">
+          <img src="./assets/images/logo.svg" alt="dictionary library">
+        </div>
+      </div>
+      <div class="navbar-right">
+        <div class="font-style-dropdown">
+          <div class="font-style-dropdown-button">
+            Sans Serif
+            <img src="./assets/images/icon-arrow-down.svg" class="font-style-dropdown-arrow">
+          </div>
+          <div class="font-style-dropdown-content">
+            <div class="font-option font-family-sans-serif js-sans-serif">Sans Serif</div>
+            <div class="font-option font-family-serif js-serif">Serif</div>
+            <div class="font-option font-family-mono js-mono">Mono</div>
+          </div>
+        </div>
+        <div class="navbar-vertical-line"></div>
+        <div class="light-mode-container">
+          <input class="light-mode-switch js-light-mode-switch" type="checkbox">
+          <img src="./assets/images/icon-moon.svg" alt="light-mode">
+        </div>
+      </div>
+    </nav>
+    <div class="search-bar">
+      <input class="search-input-bar js-search-input-bar" type="text">
+      <img class="search-icon js-search-icon" src="./assets/images/icon-search.svg" alt="search-icon">
+    </div>
+    <main class="dictionary js-dictionary">
+    </main>
+  </div>
+  <script type="module" src="./scripts/index.js"></script>
+</body>
+</html>

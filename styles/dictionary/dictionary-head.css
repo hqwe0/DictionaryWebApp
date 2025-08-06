@@ -1,0 +1,19 @@
+.dictionary{
+  width: clamp(320px, 100vw - 40px, 737px);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.dictionary-head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.word{
+  font-size: 64px;
+  font-weight: bold;
+}.phonetic{
+  font-size: 24px;
+  color: var(--main-purple);
+}

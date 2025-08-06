@@ -1,0 +1,54 @@
+@font-face {
+  font-family: mySansSerif;
+  src: url('../assets/fonts/inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+@font-face {
+  font-family: mySerif;
+  src: url('../assets/fonts/lora/Lora-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: myMono;
+  src: url('../assets/fonts/inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf');
+}
+
+:root{
+  --base-color: white;
+  --text-color: #2D2D2D;
+  --switch-color: #757575;
+  --main-purple: #A445ED;
+  --line:#E9E9E9;
+  --search-bar: #F4F4F4;
+  --meaning-color: #757575;
+  --red-color: #ff5252;
+}
+
+.darkmode{
+  --base-color: #050505;
+  --text-color: white;
+  --switch-color: #757575;
+  --main-purple: #A445ED;
+  --line:#3a3a3a;
+  --search-bar: #1f1f1f;
+  --meaning-color: #757575;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--base-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'mySansSerif';
+  row-gap: 64px;
+}

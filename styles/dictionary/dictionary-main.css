@@ -1,0 +1,51 @@
+.dictionary-main{
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.part-of-speech{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.horizontal-line{
+  background-color: var(--line);
+  height: 1px;
+  width: 100vw;
+  margin-left: 18px;
+}
+.part-of-speech p{
+  font-weight: bold;
+  font-size: 24px;
+  font-style: oblique 5deg;
+}
+.meaning, .synonym, .antonym{
+  color: var(--meaning-color);
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+.meanings ul li{
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  font-size: 18px;
+}
+.meanings ul li::marker{
+  color: var(--main-purple);
+}
+.meanings ul li p{
+  margin-top: 10px;
+  margin-left: 20px;
+  color: var(--meaning-color);
+}
+.synonym span, .antonym span{
+  color: var(--main-purple);
+}
+.synonym{
+  margin-top: -10px;
+  margin-bottom: 0px;
+}
+.antonym{
+  margin-top: -30px;
+}
