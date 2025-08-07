@@ -12,22 +12,24 @@ export function renderDictionary(data) {
     dictionary.innerHTML = html;
 }
 
-let phoneticAudio;
 
 function dictionaryHeadHtml(data) {
   const word = data.word;
   const phonetic = data.phonetics.find(phonetic => phonetic.audio && phonetic.text) || {};
   const phoneticText = phonetic.text;
-  phoneticAudio = phonetic.audio;
+  const phoneticAudio = phonetic.audio;
 
   const html = `
     <div class="word-container">
       <p class="word">${word}</p>
-      <p class="phonetic">${phoneticText}</p>
+      <p class="phonetic">${phoneticText ? phoneticText : ''}</p>
     </div>
     <div class="play-button-container js-play-button-container">
-      <img src="./assets/images/icon-play.svg" class="play-button" alt="play-button">
-      <audio class="js-play-button-audio" src="${phoneticAudio}"></audio>
+      ${phoneticAudio? `
+        <img src="./assets/images/icon-play.svg" class="play-button" alt="play-button">
+        </img><audio class="js-play-button-audio" src="${phoneticAudio}"></audio>
+      `: ''}
+      
     </div>
   `;
 
