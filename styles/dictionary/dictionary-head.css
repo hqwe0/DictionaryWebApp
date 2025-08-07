@@ -13,7 +13,11 @@
 .word{
   font-size: 64px;
   font-weight: bold;
-}.phonetic{
+}
+.phonetic{
   font-size: 24px;
   color: var(--main-purple);
+}
+.play-button{
+  cursor: pointer;
 }

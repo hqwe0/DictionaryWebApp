@@ -3,12 +3,7 @@ const dictionary = document.querySelector('.js-dictionary');
 export function renderDictionary(data) {
   const html = `
       <div class="dictionary-head">
-        <div class="word-container">
-          ${dictionaryHeadHtml(data)}
-        </div>
-        <div class="play-button-container">
-          <img src="./assets/images/icon-play.svg" alt="play-button">
-        </div>
+        ${dictionaryHeadHtml(data)}
       </div>
       <div class="dictionary-main">
         ${dictionaryMainHtml(data)}
@@ -17,15 +12,23 @@ export function renderDictionary(data) {
     dictionary.innerHTML = html;
 }
 
+let phoneticAudio;
+
 function dictionaryHeadHtml(data) {
   const word = data.word;
   const phonetic = data.phonetics.find(phonetic => phonetic.audio && phonetic.text) || {};
   const phoneticText = phonetic.text;
-  const phoneticAudio = phonetic.audio;
+  phoneticAudio = phonetic.audio;
 
   const html = `
-    <p class="word">${word}</p>
-    <p class="phonetic">${phoneticText}</p>
+    <div class="word-container">
+      <p class="word">${word}</p>
+      <p class="phonetic">${phoneticText}</p>
+    </div>
+    <div class="play-button-container js-play-button-container">
+      <img src="./assets/images/icon-play.svg" class="play-button" alt="play-button">
+      <audio class="js-play-button-audio" src="${phoneticAudio}"></audio>
+    </div>
   `;
 
   return html;
@@ -49,7 +52,7 @@ function dictionaryMainHtml(data) {
             ${definitions.map(def => `
               <li>
                 ${def.definition}
-                ${def.example ? `<p>${def.example}</p>` : ''}
+                ${def.example ? `<p>&ldquo;${def.example}&rdquo;</p>` : ''}
               </li>
             `).join('')}
           </ul>

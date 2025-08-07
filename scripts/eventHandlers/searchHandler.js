@@ -4,6 +4,7 @@ import { renderEmptyAlert } from "../renderDictionary/emptyState.js";
 
 const input = document.querySelector('.js-search-input-bar');
 const searchIcon = document.querySelector('.js-search-icon');
+const dictionary = document.querySelector('.js-dictionary');
 
 export async function getWordJson(word) {
   const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
