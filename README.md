@@ -73,6 +73,7 @@ Because this project uses ES Modules in the browser, it’s best to run it with 
 - Restructure the codebase to make adding multiple languages easier
 - Add support for additional languages (beyond English)
 - Refine and improve the mobile layout/responsiveness
+- Persist dark mode state and selected font family using local storage (local history)
 
 ## Acknowledgements
 - Inspired by the “Dictionary web app” challenge from Frontend Mentor
